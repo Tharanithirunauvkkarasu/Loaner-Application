@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="52741c349ff202107f44cf186124abdd" extends="task" label="Loaner Request" max_length="40" name="x_cdltd_loaner_req_loaner_request" type="collection">
+        <element label="Overdue count" max_length="40" name="overdue_count" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Overdue reminder" max_length="40" name="overdue_remainder" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Pickup remainder" max_length="40" name="pickup_remainder" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Pick up Remainder" max_length="40" name="pick_up_remainder" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Return reminder" max_length="40" name="return_remainder" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Additional comments" max_length="4000" name="u_comments" type="journal"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="santa clara" label="Depot" max_length="40" name="u_depot" type="string">
             <choice>
@@ -12,7 +17,7 @@
                 <element inactive_on_update="false" label="Other" sequence="6" value="other"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="End date" max_length="40" name="u_end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="End date" mandatory="true" max_length="40" name="u_end_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="cmdb_ci_computer" label="Item type" max_length="40" name="u_item_type" type="string">
             <choice>
                 <element inactive_on_update="false" label="Laptop" sequence="0" value="cmdb_ci_computer"/>
@@ -23,7 +28,7 @@
         <element attributes="edge_encryption_enabled=true" label="Location to be  used" max_length="40" name="u_location" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element attributes="encode_utf8=false" label="Requested for" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Start date" max_length="40" name="u_start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Start date" mandatory="true" max_length="40" name="u_start_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="Additional comments (Customer visible)" max_length="40" name="u_string_1" type="string"/>
     </element>
 </database>
